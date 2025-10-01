@@ -25,10 +25,14 @@
             "id": "a197361a5c68d994",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "README"
             }
           }
         ],
@@ -182,6 +186,8 @@
   },
   "active": "a197361a5c68d994",
   "lastOpenFiles": [
+    "README.md~",
+    "README.md",
     "Welcome.md",
     "Development Guidelines.md",
     "Available Apps.md",
