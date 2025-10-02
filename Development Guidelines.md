@@ -4,8 +4,8 @@ You will need to take some decisions and make some choices:
 # Content
 
 ### 1. The recitations (Rewayah) you want to include in your app
-you need to decide if you are going to support 1 or multiple ones. i.e. (Hafs, Warsh, Shubah, Qaloun, etc...)
-The resources for the quran Layoutt:
+you need to decide if you are going to support one or multiple ones. i.e. (Hafs, Warsh, Shubah, Qaloun, etc...)
+The resources for the quran Layout:
 1. Hafs (حفص):
 	1. Medina Transcript: King Fahd Quran Complex, Multiple Formats  https://qurancomplex.gov.sa/en/techquran/dev/
 	2. Shamarly: PNG image per Page https://github.com/Mr-DDDAlKilanny/shamraly-images

@@ -4,4 +4,3 @@
 
 # [Development Roadmap](./Development%20Guidelines.md)
 # [Available Apps](./Available%20Apps.md)
-# [[Available Apps]]
