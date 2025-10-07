@@ -69,7 +69,7 @@ you can get the content of the Quran as json, csv or SQL fromat from
 
 
 ### 4. Search
-If you want to add search functionality, you can do it manually but be aware of the pitfalls, such as Hamza (ء) and Taa marbota (ة). It is always recormmended to use a production ready search.
+If you want to add search functionality, you can do it manually but be aware of the pitfalls, such as Hamza (ء) and Taa marbota (ة). It is always recommended to use a production ready search.
 Available search engines are divided into Full Text Search and Semantic Search.
 #### Full Text Search
 Full text search: User can search for a word or a phrase and even if the user has typos in their search query, the search engine will stay return relevant results
@@ -84,6 +84,7 @@ Full text search: User can search for a word or a phrase and even if the user ha
 Semantic Search (Search by Meaning): The search will not be applied on the quran script but you can search by Meaning or the root of the word (الجذر اللغوي), this type of search is particularly helpful for users who do not know for certain what they are looking for, and/or for quran translations.
 1. https://www.alfanous.org/en/aya/
 
+
 ### Translations
 
 > [!NOTE] Errors!
@@ -92,7 +93,7 @@ Semantic Search (Search by Meaning): The search will not be applied on the quran
 
 #### Available Resources
 1. https://tanzil.net/trans/
-2.  https://qul.tarteel.ai/resources/translation
+2. https://qul.tarteel.ai/resources/translation
 3. https://github.com/fawazahmed0/quran-api
 4. https://api-docs.quran.foundation/docs/content_apis_versioned/list-surah-translations
 
