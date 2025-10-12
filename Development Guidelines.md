@@ -3,7 +3,7 @@ You will need to take some decisions and make some choices:
 
 # Content
 
-### 1. The recitations (Rewayah) you want to include in your app
+### 1. The narrations (Rewayah) you want to include in your app
 you need to decide if you are going to support one or multiple ones. i.e. (Hafs, Warsh, Shubah, Qaloun, etc...)
 The resources for the quran Layout:
 1. Hafs (حفص):
@@ -39,7 +39,7 @@ The resources for the quran Layout:
 > You have to consider this variation whilst developing your app
 > -- TODO: Hassaan: needs resource for this warning
 
-#### Resources to annotate Quran Layout
+#### Resources to annotate Quran Layout's ayah location
 1. This tool https://github.com/quran/ayah-detection can help you in annotating the Ayahs
 2. AI tool to detect annotation from Image Mushafs https://github.com/bllfoad/ayahai
 
