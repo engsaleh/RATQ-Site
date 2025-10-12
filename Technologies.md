@@ -10,29 +10,3 @@
 
 
 
-3 scopes:
-1. Data
-	1. get high quality resources, ready for digital usage
-	2. Ranking Resources, like books and audio recitations
-	3. Publisher guarantee 
-2. Technologies
-	1. 
-3. Infra
-Generate a research annually about the state of the Quranic Scene
-Could be useful for integration with QUL and their CMS
-
-
-
-Experience
-
-Connect community to this repo
-
-السلام عليكم 
-هذه الgithub repo بها مشروع رتق الذي يحتوي على الادوات وخريطة العمل للمطورين المهتمين بتطوير تطبيقات قرانية
-تحتوي على التحديات وبعض الحلول التي قد تواجه المطور في رحلته
-ويوجد صفحة ايضا بها حصر للتقنيات وبعض المعلومات الاساسية حتى يستفيد منها المطور 
-اذا وجدتم ان هناك بعض النقص او التحسينات يمكن فتح Pull Request بالتغيير المطلوب او فتح issue اذا كان الموضوع يحتاج الى نقاش
-
-بعد نقاشي مع خالد نظن انه من الجيد ان يكون ربط من جهة المنتدى الى github بذكر الرابط في المنتدى
-ويمكن ايضا وضع رابط المنتدى داخل github في المواضيع التي سيكون لها نقاش
-
