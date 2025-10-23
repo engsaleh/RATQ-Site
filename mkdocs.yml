@@ -1,0 +1,21 @@
+site_name: RATQ - Roadmap & Technologies for Qur’an Apps
+repo_url: https://github.com/engsaleh/RATQ-Site
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - content.code.annotate
+markdown_extensions:
+  - admonition
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+nav:
+  - Home: README.md
+  - Technologies: Technologies.md
+  - Apps: Available Apps.md
+  - Development Guidelines: Development Guidelines.md
