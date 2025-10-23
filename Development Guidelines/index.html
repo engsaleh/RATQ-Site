@@ -1,0 +1,960 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Available%20Apps/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Development Guidelines - RATQ - Roadmap & Technologies for Qur’an Apps</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#content" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="RATQ - Roadmap &amp; Technologies for Qur’an Apps" class="md-header__button md-logo" aria-label="RATQ - Roadmap & Technologies for Qur’an Apps" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            RATQ - Roadmap & Technologies for Qur’an Apps
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Development Guidelines
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/engsaleh/RATQ-Site" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Technologies/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Technologies
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Available%20Apps/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Apps
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Development Guidelines
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="RATQ - Roadmap &amp; Technologies for Qur’an Apps" class="md-nav__button md-logo" aria-label="RATQ - Roadmap & Technologies for Qur’an Apps" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    RATQ - Roadmap & Technologies for Qur’an Apps
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/engsaleh/RATQ-Site" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Technologies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Technologies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Available%20Apps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Apps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Development Guidelines
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Development Guidelines
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-the-narrations-rewayah-you-want-to-include-in-your-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. The narrations (Rewayah) you want to include in your app
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-get-annotations-for-the-start-and-end-of-each-ayah-for-the-downloaded-resource" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Get annotations for the start and end of each ayah for the downloaded resource
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Get annotations for the start and end of each ayah for the downloaded resource">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resources-to-annotate-quran-layouts-ayah-location" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources to annotate Quran Layout's ayah location
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-get-the-quran-script-for-highlighting-and-naive-search-purposes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Get the Quran Script for highlighting and naive search purposes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Search
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Search">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#full-text-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Full Text Search
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#semantic-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Semantic Search
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#translations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Translations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Translations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available Resources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tafsir" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tafsir
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tafsir">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sources:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audio-recitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audio Recitations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Audio Recitations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-the-narrations-rewayah-you-want-to-include-in-your-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. The narrations (Rewayah) you want to include in your app
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-get-annotations-for-the-start-and-end-of-each-ayah-for-the-downloaded-resource" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Get annotations for the start and end of each ayah for the downloaded resource
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Get annotations for the start and end of each ayah for the downloaded resource">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resources-to-annotate-quran-layouts-ayah-location" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources to annotate Quran Layout's ayah location
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-get-the-quran-script-for-highlighting-and-naive-search-purposes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Get the Quran Script for highlighting and naive search purposes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Search
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Search">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#full-text-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Full Text Search
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#semantic-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Semantic Search
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#translations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Translations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Translations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available Resources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tafsir" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tafsir
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tafsir">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sources:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audio-recitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audio Recitations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Audio Recitations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<p>When you start developing a Quranic App (mobile or web)
+You will need to take some decisions and make some choices:</p>
+<h1 id="content">Content<a class="headerlink" href="#content" title="Permanent link">&para;</a></h1>
+<h3 id="1-the-narrations-rewayah-you-want-to-include-in-your-app">1. The narrations (Rewayah) you want to include in your app<a class="headerlink" href="#1-the-narrations-rewayah-you-want-to-include-in-your-app" title="Permanent link">&para;</a></h3>
+<p>you need to decide if you are going to support one or multiple ones. i.e. (Hafs, Warsh, Shubah, Qaloun, etc...)
+The resources for the quran Layout:
+1. Hafs (حفص):
+    1. Medina Transcript: King Fahd Quran Complex, Multiple Formats  <a href="https://qurancomplex.gov.sa/quran-dev/">https://qurancomplex.gov.sa/quran-dev/</a>
+    2. Shamarly: PNG image per Page https://github.com/Mr-DDDAlKilanny/shamraly-images
+    3. Medina Transcript: https://quraankarem.wordpress.com/qurancomplex/
+    4. Shamarly Transcript: https://quraankarem.wordpress.com/shamarly/
+    5. Medina: EveryAyah.com, PNG image per Ayah https://everyayah.com/data/quranpngs/<br />
+    6. Medina: EveryAyah.com, JPG image per Ayah https://everyayah.com/data/QuranText_jpg/
+    7. Multiple: https://qul.tarteel.ai/resources/mushaf-layout
+        1. Script to Download Mushaf pages from QUL https://github.com/blueheron786/get-quran-mushaf-images
+2. Warsh (ورش)
+    1. Medina Transcript: King Fahd Quran Complex  <a href="https://qurancomplex.gov.sa/quran-dev/">https://qurancomplex.gov.sa/quran-dev/</a>
+3. Shubah (شعبة)
+    1. Medina Transcript: King Fahd Quran Complex  <a href="https://qurancomplex.gov.sa/quran-dev/">https://qurancomplex.gov.sa/quran-dev/</a>
+4. Qaloun (قالون)
+    1. Medina Transcript: King Fahd Quran Complex  <a href="https://qurancomplex.gov.sa/quran-dev/">https://qurancomplex.gov.sa/quran-dev/</a>
+5. Duri (الدوري)
+    1. Medina Transcript: King Fahd Quran Complex  <a href="https://qurancomplex.gov.sa/quran-dev/">https://qurancomplex.gov.sa/quran-dev/</a>
+6. Susi (السوسي)
+    1. Medina Transcript: King Fahd Quran Complex <a href="https://qurancomplex.gov.sa/quran-dev/">https://qurancomplex.gov.sa/quran-dev/</a>
+7. Hesham (هشام)
+    1. Medina Transcript: King Fahd Quran Complex  <a href="https://qurancomplex.gov.sa/quran-dev/">https://qurancomplex.gov.sa/quran-dev/</a></p>
+<h3 id="2-get-annotations-for-the-start-and-end-of-each-ayah-for-the-downloaded-resource">2. Get annotations for the start and end of each ayah for the downloaded resource<a class="headerlink" href="#2-get-annotations-for-the-start-and-end-of-each-ayah-for-the-downloaded-resource" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>[!NOTE] Warning
+Some Resources do not have Ayah start and end annotation. You may need to split them yourself</p>
+<p>[!NOTE] Warning
+Recitations vary in the number of Ayahs in each transcript
+i.e. Hafs has 6236 Ayahs, while Warsh has 6214 Ayahs. They Quran is the same, but the Ayahs are split differently 
+You have to consider this variation whilst developing your app
+-- TODO: Hassaan: needs resource for this warning</p>
+</blockquote>
+<h4 id="resources-to-annotate-quran-layouts-ayah-location">Resources to annotate Quran Layout's ayah location<a class="headerlink" href="#resources-to-annotate-quran-layouts-ayah-location" title="Permanent link">&para;</a></h4>
+<ol>
+<li>This tool https://github.com/quran/ayah-detection can help you in annotating the Ayahs</li>
+<li>AI tool to detect annotation from Image Mushafs https://github.com/bllfoad/ayahai</li>
+</ol>
+<h3 id="3-get-the-quran-script-for-highlighting-and-naive-search-purposes">3. Get the Quran Script for highlighting and naive search purposes<a class="headerlink" href="#3-get-the-quran-script-for-highlighting-and-naive-search-purposes" title="Permanent link">&para;</a></h3>
+<p>having the images of the Quran as SVG, PNG,  or JPG is not enough, you still need to have the Quran Script (QS) in order for the machine to understand it as well
+you can get the content of the Quran as json, csv or SQL fromat from
+1. Hafs (حفص):
+    1. Quran Foundation, https://api-docs.quran.foundation/docs/content_apis_versioned/quran-verses-indopak [API]
+    2. King Fahd Quran Complex, [csv, html, json, sql, txt, xlsx, xml]  <a href="https://qurancomplex.gov.sa/quran-dev/">https://qurancomplex.gov.sa/quran-dev/</a> [Downloadable]
+    3. Every Ayah [XML] https://everyayah.com/data/XML/Arabic/ 
+    4. Tanzil[Bar Seperated Values, XML, SQL (MySql dump)] https://tanzil.net/download/
+    5. Mushaf Mauri: https://github.com/Zizwar/mushaf-mauri/tree/main/assets/pages/hafsTajweed
+2. Warsh (ورش)
+    1. Medina Transcript: King Fahd Quran Complex, [csv, html, json, sql, txt, xlsx, xml]  <a href="https://qurancomplex.gov.sa/quran-dev/">https://qurancomplex.gov.sa/quran-dev/</a> [Downloadable]
+    2. Mushaf Mauri: https://github.com/Zizwar/mushaf-mauri/tree/main/assets/pages/muhammadi -- TODO: Hassaan: needs verification if this is warsh
+3. Shubah (شعبة)
+    1. Medina Transcript: King Fahd Quran Complex, [csv, html, json, sql, txt, xlsx, xml]  <a href="https://qurancomplex.gov.sa/quran-dev/">https://qurancomplex.gov.sa/quran-dev/</a> [Downloadable]
+4. Qaloun (قالون)
+    1. Medina Transcript: King Fahd Quran Complex, [csv, html, json, sql, txt, xlsx, xml]  <a href="https://qurancomplex.gov.sa/quran-dev/">https://qurancomplex.gov.sa/quran-dev/</a> [Downloadable]
+5. Duri (الدوري)
+    1. Medina Transcript: King Fahd Quran Complex, [csv, html, json, sql, txt, xlsx, xml]  <a href="https://qurancomplex.gov.sa/quran-dev/">https://qurancomplex.gov.sa/quran-dev/</a> [Downloadable]
+6. Susi (السوسي)
+    1. Medina Transcript: King Fahd Quran Complex, [csv, html, json, sql, txt, xlsx, xml] <a href="https://qurancomplex.gov.sa/quran-dev/">https://qurancomplex.gov.sa/quran-dev/</a> [Downloadable]
+7. Hesham (هشام)
+    1. Medina Transcript: King Fahd Quran Complex, [csv, html, json, sql, txt, xlsx, xml]  <a href="https://qurancomplex.gov.sa/quran-dev/">https://qurancomplex.gov.sa/quran-dev/</a> [Downloadable]
+8. Collection: https://qul.tarteel.ai/resources/quran-script</p>
+<h3 id="4-search">4. Search<a class="headerlink" href="#4-search" title="Permanent link">&para;</a></h3>
+<p>If you want to add search functionality, you can do it manually but be aware of the pitfalls, such as Hamza (ء) and Taa marbota (ة). It is always recommended to use a production ready search.
+Available search engines are divided into Full Text Search and Semantic Search.</p>
+<h4 id="full-text-search">Full Text Search<a class="headerlink" href="#full-text-search" title="Permanent link">&para;</a></h4>
+<p>Full text search: User can search for a word or a phrase and even if the user has typos in their search query, the search engine will stay return relevant results
+1. Arabic:
+    1. Kalimat.dev https://www.kalimat.dev/ 
+        1. sometimes is not accurate for instance searching for "عرب" returns results that are not related to search
+    2. Quran Foundation: https://api-docs.quran.foundation/docs/content_apis_versioned/search
+2. English:
+    1. https://www.kalimat.dev/
+    -- Hypothetically kalimat.dev supports many languages, but their search api returns 500 response for any search request as of this writing 2025-10-01</p>
+<h4 id="semantic-search">Semantic Search<a class="headerlink" href="#semantic-search" title="Permanent link">&para;</a></h4>
+<p>Semantic Search (Search by Meaning): The search will not be applied on the quran script but you can search by Meaning or the root of the word (الجذر اللغوي), this type of search is particularly helpful for users who do not know for certain what they are looking for, and/or for quran translations.
+1. https://www.alfanous.org/en/aya/</p>
+<h3 id="translations">Translations<a class="headerlink" href="#translations" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>[!NOTE] Errors!
+Translations are written by human, thus there are errors in these translation. Subsequently these translations are updated frequently, please make sure that you use an up-to-date version of the translation and continue updating your app to have the latest corrections from well-known resources. 
+We encourage any developer to use an API or any CMS to maintain the latest versions. In order to avoid spreading any misinformation.</p>
+</blockquote>
+<h4 id="available-resources">Available Resources<a class="headerlink" href="#available-resources" title="Permanent link">&para;</a></h4>
+<ol>
+<li>https://tanzil.net/trans/</li>
+<li>https://qul.tarteel.ai/resources/translation</li>
+<li>https://github.com/fawazahmed0/quran-api</li>
+<li>https://api-docs.quran.foundation/docs/content_apis_versioned/list-surah-translations</li>
+</ol>
+<h3 id="tafsir">Tafsir<a class="headerlink" href="#tafsir" title="Permanent link">&para;</a></h3>
+<p>You may also want to include Tafsir in your application.
+There are multiple Tafsir books. Some are more famous than others. The list also can grow as more books get published.</p>
+<blockquote>
+<p>[!NOTE] Copyrights!
+Tafsirs are books and they may be protected by copyright laws, make sure that you check the copyright license of each book you want to include. if the license does not allow you to use a book, try to reach out to the publisher to get their approval.</p>
+<p>[!NOTE] Errors!
+Tafsirs are also is susceptible to the same issue as Translations, where there may be some errors that get fixed overtime. so make sure that you are getting an up to date copy of any book.
+Even very old books, sometimes get some fixes related to a typo or some content that was misread by OCR.</p>
+</blockquote>
+<h4 id="sources">Sources:<a class="headerlink" href="#sources" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Spa5k: https://github.com/spa5k/tafsir_api</li>
+<li>QUL: https://qul.tarteel.ai/resources/tafsir</li>
+<li>Quran Foundation: https://api-docs.quran.foundation/docs/content_apis_versioned/list-surah-tafsirs</li>
+</ol>
+<h3 id="audio-recitations">Audio Recitations<a class="headerlink" href="#audio-recitations" title="Permanent link">&para;</a></h3>
+<p>People Also like to listen to their favorite reciters, you can also </p>
+<blockquote>
+<p>[!NOTE] Errors!
+Audio Recitation are also is susceptible to the same issue as Translations, They are made by humans and there could be various errors in each recitation. i.e. Tajwid, Mispronunciation, etc...
+Make sure that you are using an up to date version if you are downloading the assets or use an API to get an up to date version of the Recitation</p>
+</blockquote>
+<h4 id="resources">Resources:<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h4>
+<ol>
+<li>MP3Quran https://www.mp3quran.net/eng/api</li>
+<li></li>
+</ol>
+<p>--TODO: Hassaan: add postman collection for Quran Foundation API</p>
+<h1 id="technologies">Technologies<a class="headerlink" href="#technologies" title="Permanent link">&para;</a></h1>
+<p>These can vary by Technology, we need to have a list most popular frameworks, 
+Address any known difficulties in them.
+Kotlin, Swift, Flutter, React.</p>
+<h3 id="best-practices-for-displaying-mushaf">Best Practices for Displaying Mushaf<a class="headerlink" href="#best-practices-for-displaying-mushaf" title="Permanent link">&para;</a></h3>
+<h3 id="audio-players">Audio Players<a class="headerlink" href="#audio-players" title="Permanent link">&para;</a></h3>
+<h3 id="video-players">Video Players<a class="headerlink" href="#video-players" title="Permanent link">&para;</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "content.code.annotate"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
